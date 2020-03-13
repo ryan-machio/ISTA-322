@@ -1,0 +1,63 @@
+# The best practices used in this code were simple is better than complex and complex is better than complicated.
+# Simple is better than complex is portrayed while creating the menu's, along with outputting the menu of automotive services.
+# Complex is better than complicated is portrayed in the if-else and else-if statements.  The complexity of the code is that it draws
+# variables from menu2 instead of menu, as the dictionary menu contains only strings.  The reason behind this is to calculate the prices
+# of the services selected from the menu using math properties, as you can only add or subtract using integers or floats, and not strings.
+# The algoirthm and data structure chosen to complete this task were most effective because the code follows a step-by-step procedure
+# that is built from a foundation.  The foundation would be the menus and displaying the automotive menu.  Following that would be
+# processing the input values to output the correct information.  The if-else and else-if statements are used to assist in calculating
+# the final value of the services.
+
+import math
+# menu for variables that use only strings
+menu = {
+    'Oil change': '$35',
+    'Tire rotation': '$19',
+    'Car wash': '$7',
+    'Car wax': '$12',
+    '-': 'No service'
+}
+# second menu for prices as integers to use in equations, rather than strings
+menu2 = {
+    'Oil change': 35,
+    'Tire rotation': 19,
+    'Car wash': 7,
+    'Car wax': 12,
+    '-': 'No service'
+}
+
+# lines 30-35 are for viewing the menu's services
+davy = ('Davy\'s auto shop services')
+print(davy)
+print('Oil change -- $35')
+print('Tire rotation -- $19')
+print('Car wash -- $7')
+print('Car wax -- $12\n')
+
+serv1 = input('Select first service: \n\n') # prompt user to select a service
+serv2 = input('Select second service: \n') # prompt user to select a second service
+
+print('')
+print('')
+print('Davy\'s auto shop invoice') # all lines follwoing this one will be the output for the invoice
+print('')
+# liens 44 - 49 are outputs for service one, depending on selected service
+if serv1 == '-':
+    print('Service 1: No service')
+else:
+    print('Service 1: %s,' % serv1, menu[serv1]) # retrieve string data from menu, rather than menu 2 which has integers
+# lines 50 - 53 are outputs for service 2, depending on selected service
+if serv2 == '-':
+    print('Service 2: No service')
+else:
+    print('Service 2: %s,' % serv2, menu[serv2]) # retrieve string data from menu, rather than menu 2 which has integers
+# lines 55 - 59 are for processsing the total value of selected items
+if (serv1 != '-') and (serv2 != '-'): # for when there are two services selected
+    total = menu2[serv1] + menu2[serv2]
+elif (serv1 == '-') and (serv2 != '-'): # process for only a service 1 prompt
+    total = menu2[serv2]
+elif (serv1 != '-') and (serv2 == '-'): # process for only a service 2 prompt
+    total = menu2[serv1]
+    
+print('')
+print('Total: $%d' % total) # total for selected serices

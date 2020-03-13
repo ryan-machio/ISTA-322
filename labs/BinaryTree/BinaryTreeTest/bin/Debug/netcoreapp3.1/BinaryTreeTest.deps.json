@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BinaryTreeTest/1.0.0": {
+        "dependencies": {
+          "Ch17LabBinaryTree": "1.0.0"
+        },
+        "runtime": {
+          "BinaryTreeTest.dll": {}
+        }
+      },
+      "Ch17LabBinaryTree/1.0.0": {
+        "runtime": {
+          "Ch17LabBinaryTree.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BinaryTreeTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ch17LabBinaryTree/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
