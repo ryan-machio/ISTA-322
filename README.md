@@ -1,4 +1,4 @@
-# ISTA322 - Database
+# ISTA322 - ASP.NET
 
 ## Ryan Manchanthasouk
 
